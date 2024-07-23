@@ -12,7 +12,7 @@ public class ProveedorDTO {
 	private String telefonoContacto;
 	
 	public ProveedorDTO(int id, String nombre, String rut, String direccion, String correo, String telefono,
-			String contacto, String telefono_contacto) {
+			String contacto, String telefonoContacto) {
 
 		this.id = id;
 		this.nombre = nombre;
@@ -21,7 +21,7 @@ public class ProveedorDTO {
 		this.correo = correo;
 		this.telefono = telefono;
 		this.contacto = contacto;
-		this.telefonoContacto = telefono_contacto;
+		this.telefonoContacto = telefonoContacto;
 	}
 
 	public int getId() {
@@ -84,8 +84,15 @@ public class ProveedorDTO {
 		return telefonoContacto;
 	}
 
-	public void setTelefonoContacto(String telefono_contacto) {
-		this.telefonoContacto = telefono_contacto;
+	public void setTelefonoContacto(String telefonoContacto) {
+		this.telefonoContacto = telefonoContacto;
+	}
+
+	@Override
+	public String toString() {
+		return "ProveedorDTO [id=" + id + ", nombre=" + nombre + ", rut=" + rut + ", direccion=" + direccion
+				+ ", correo=" + correo + ", telefono=" + telefono + ", contacto=" + contacto + ", telefonoContacto="
+				+ telefonoContacto + "]";
 	} 
 
 	

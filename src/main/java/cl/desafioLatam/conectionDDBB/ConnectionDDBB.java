@@ -17,12 +17,13 @@ public class ConnectionDDBB {
 		String password = "root";
 
 		try {
+			  Class.forName("org.postgresql.Driver");
 			connectionSql = DriverManager.getConnection(url, user, password);
 			if(connectionSql != null) {
 				System.out.println("Conexion Exitosa a la base de datos.");
 			}
 			
-		} catch (SQLException e) {
+		} catch (SQLException | ClassNotFoundException e) {
 			
 			System.out.println("No se ha podido establecer conexion con la Base De datos.");
 			System.out.println("Error "+e.getMessage());
